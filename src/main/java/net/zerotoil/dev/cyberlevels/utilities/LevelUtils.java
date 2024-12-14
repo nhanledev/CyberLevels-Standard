@@ -132,8 +132,8 @@ public class LevelUtils {
     }
 
     public String getPercent(Double exp, Double requiredExp) {
-        if (requiredExp.equals(exp)) return "100";
-        return (int) (100 * (exp / requiredExp)) + "";
+        if (requiredExp.equals(exp)) return "100.00";
+        return String.format("%.2f", (100 * (exp / requiredExp)));
     }
 
     public int getDecimals() {
